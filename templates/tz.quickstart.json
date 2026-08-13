@@ -1,0 +1,26 @@
+{
+  "title": "test_from_inbox",
+  "format": { "width": 1920, "height": 1080, "fps": 30 },
+  "clips": [
+    { "start": 0, "end": 8 },
+    { "start": 8, "end": 16, "zoom": 1.08 }
+  ],
+  "music": {
+    "file": "bg_soft.wav",
+    "volume_db": -18,
+    "fade_in_sec": 1.0,
+    "fade_out_sec": 1.5,
+    "loop": true
+  },
+  "options": {
+    "mute_source_audio": false,
+    "detect_scene_cuts": false,
+    "create_subtitles": false
+  },
+  "export": {
+    "enabled": true,
+    "format": "mp4",
+    "codec": "H264",
+    "custom_name": "test_from_inbox"
+  }
+}

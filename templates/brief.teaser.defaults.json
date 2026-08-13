@@ -1,0 +1,30 @@
+{
+  "title": "teaser_9x16",
+  "idea": "Затравка 20–30 сек: максимум напряжения, без спойлеров финала, одна сцена/одна мысль.",
+  "hero": "",
+  "target_duration_sec": 25,
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "scale": "fill"
+  },
+  "music": {
+    "file": "brazilian_phonk_cc0.mp3",
+    "volume_db": -24,
+    "fade_in_sec": 0.5,
+    "fade_out_sec": 1.2,
+    "loop": true
+  },
+  "notes": "Hard cut. Audio fade ≤6 frames. Целые фразы. review_subtitles перед assemble. focus/vfocus на лицо.",
+  "options": {
+    "mute_source_audio": false,
+    "scale": "fill"
+  },
+  "export": {
+    "enabled": true,
+    "format": "mp4",
+    "codec": "H264",
+    "custom_name": "teaser_9x16"
+  }
+}

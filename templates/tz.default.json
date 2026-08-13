@@ -1,0 +1,33 @@
+{
+  "title": "auto_edit",
+  "idea": "",
+  "hero": "",
+  "target_duration_sec": 45,
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "scale": "fill"
+  },
+  "clips": [],
+  "music": {
+    "file": "brazilian_phonk_cc0.mp3",
+    "volume_db": -15,
+    "fade_in_sec": 1.0,
+    "fade_out_sec": 2.0,
+    "loop": true
+  },
+  "options": {
+    "mute_source_audio": false,
+    "detect_scene_cuts": false,
+    "create_subtitles": false,
+    "scale": "fill",
+    "engine": "ffmpeg"
+  },
+  "export": {
+    "enabled": true,
+    "format": "mp4",
+    "codec": "H264",
+    "custom_name": null
+  }
+}

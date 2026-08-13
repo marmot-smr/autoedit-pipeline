@@ -1,0 +1,31 @@
+{
+  "title": "shorts_demo",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "clips": [
+    { "start": 5.0, "end": 12.5, "zoom": 1.0 },
+    { "start": 20.0, "end": 28.0, "zoom": 1.12 },
+    { "start": 45.0, "end": 55.0, "zoom": 1.08 }
+  ],
+  "music": {
+    "file": "bg_soft.wav",
+    "volume_db": -20,
+    "fade_in_sec": 0.8,
+    "fade_out_sec": 1.5,
+    "loop": true
+  },
+  "options": {
+    "mute_source_audio": false,
+    "detect_scene_cuts": false,
+    "create_subtitles": false
+  },
+  "export": {
+    "enabled": true,
+    "format": "mp4",
+    "codec": "H264",
+    "custom_name": "shorts_demo_final"
+  }
+}
