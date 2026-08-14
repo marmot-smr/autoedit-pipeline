@@ -1,0 +1,26 @@
+{
+  "id": "shot-stable-framing",
+  "kind": "style",
+  "title": "Кадрирование только со сменой плана",
+  "youtube_url": null,
+  "youtube_id": null,
+  "source": "session",
+  "status": "ready",
+  "imported_at": "2026-08-14",
+  "summary": "focus / vfocus / zoom меняются только при смене shot. Одинаковое лицо на соседних склейках — одинаковое кадрирование, иначе кадр «о дёргается». Пустой кадр (стена, канаты, пол) — брак.",
+  "learned_rules": [
+    "Каждому клипу поле shot.",
+    "Одинаковый shot → идентичные focus, vfocus, zoom.",
+    "Менять кадрирование только на reverse / новый ракурс / новый персонаж / новая локация.",
+    "Перед сборкой проверить mid-frame: субъект в кадре."
+  ],
+  "tags": ["framing", "9:16", "ultrawide"],
+  "applied_in": [
+    {
+      "job": "young_sherlock_s01e01",
+      "title": "Young Sherlock S01E01 — затравка 9:16",
+      "when": "2026-08-14",
+      "note": "shot-группы fight_yard, barn_sherlock_b и др.; finalize_plan выравнивает кадрирование внутри shot."
+    }
+  ]
+}

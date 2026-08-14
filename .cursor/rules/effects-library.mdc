@@ -1,0 +1,28 @@
+---
+description: YouTube guides / effects library — ingest, reference by id, mark applied_in
+alwaysApply: true
+---
+
+# Библиотека приёмов
+
+Каталог: `library/items/*.json` (индекс `library/catalog.json`).
+
+## Когда кидают ссылку на YouTube
+
+1. `python scripts/library.py ingest --url "<url>"` (или `.\run.ps1 -LibraryIngest -Url "..."`).
+2. Открой гайд (WebFetch/поиск), выпиши конкретные правила монтажа в `learned_rules`.
+3. Заполни `summary`, `tags`, `title`; `status`: `ready` (не оставляй пустой stub, если просил научиться).
+4. `python scripts/library.py rebuild`.
+5. В ответе дай **id** карточки — по нему будут ссылаться в следующих монтажах.
+
+## Когда просят смонтировать «как в гайде / как в id»
+
+1. Прочитай `library/items/<id>.json`.
+2. Применяй `learned_rules` поверх teaser-assembly (правила ядра не отменяются, если гайд им противоречит — скажи об этом).
+3. После сборки: `python scripts/library.py apply --item <id> --job <slug> --title "..." --note "что именно взяли"`.
+
+## Не делать
+
+- Не хранить в каталоге сырые видео/транскрипты эпизодов.
+- Не выдумывать `applied_in` — только реальные джобы.
+- Не импортировать гайд без URL/id.

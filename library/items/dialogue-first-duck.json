@@ -1,0 +1,25 @@
+{
+  "id": "dialogue-first-duck",
+  "kind": "style",
+  "title": "Музыка bed, диалог сверху",
+  "youtube_url": null,
+  "youtube_id": null,
+  "source": "session",
+  "status": "ready",
+  "imported_at": "2026-08-14",
+  "summary": "Фон не глушит сериал. Дефолт volume_db −24 и sidechain duck по дорожке речи.",
+  "learned_rules": [
+    "music.volume_db по умолчанию −24 (не громче −22).",
+    "Sidechain compress по диалогу включён.",
+    "Экспорт yuv420p + faststart."
+  ],
+  "tags": ["audio", "music", "mix"],
+  "applied_in": [
+    {
+      "job": "young_sherlock_s01e01",
+      "title": "Young Sherlock S01E01 — затравка 9:16",
+      "when": "2026-08-14",
+      "note": "brazilian_phonk_cc0.mp3 @ −24 dB + duck."
+    }
+  ]
+}

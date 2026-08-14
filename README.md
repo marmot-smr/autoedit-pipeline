@@ -25,6 +25,17 @@ pip install -r requirements.txt
 .\run.ps1 -Assemble -Brief "templates\brief.teaser.defaults.json"
 ```
 
+## Библиотека приёмов
+
+Гайды с YouTube и стили сессий: `library/`. Оболочка с превью и списком джоб:
+
+```powershell
+.\run.ps1 -Library
+.\run.ps1 -LibraryIngest -Url "https://www.youtube.com/watch?v=XXXX"
+```
+
+В чате достаточно кинуть ссылку и сказать «сохрани в библиотеку» / «монтируй как `<id>`».
+
 ## Структура
 
 | Путь | Назначение |

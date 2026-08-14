@@ -7,7 +7,11 @@ param(
     [string]$Plan = "",
     [switch]$ReuseTranscript,
     [switch]$AlsoResolve,
-    [string]$Model = "medium"
+    [string]$Model = "medium",
+    [switch]$Library,
+    [switch]$LibraryIngest,
+    [string]$Url = "",
+    [string]$ItemId = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -32,6 +36,19 @@ Write-Host "Root:   $Root"
 
 if ($Check) {
     & $Python (Join-Path $Root "scripts\check_resolve.py")
+    exit $LASTEXITCODE
+}
+
+if ($LibraryIngest) {
+    if (-not $Url) { throw "Укажи -Url ссылку на YouTube" }
+    $ingest = @((Join-Path $Root "scripts\library.py"), "ingest", "--url", $Url)
+    if ($ItemId) { $ingest += @("--id", $ItemId) }
+    & $Python @ingest
+    exit $LASTEXITCODE
+}
+
+if ($Library) {
+    & $Python (Join-Path $Root "scripts\library.py") "serve"
     exit $LASTEXITCODE
 }
 

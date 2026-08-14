@@ -1,0 +1,26 @@
+{
+  "id": "hard-cut-dialogue",
+  "kind": "style",
+  "title": "Hard cut, целые фразы",
+  "youtube_url": null,
+  "youtube_id": null,
+  "source": "session",
+  "status": "ready",
+  "imported_at": "2026-08-14",
+  "summary": "Картинка только hard cut. Кроссфейд видео режет реплики. Звук встык на смежных таймкодах, на гэпе fade не длиннее 6 кадров (лучше 4).",
+  "learned_rules": [
+    "Не использовать picture xfade/crossfade.",
+    "Резать только по границам реплик транскрипта.",
+    "Abutting клипы (end == next.start) — без audio fade.",
+    "На гэпе audio fade ≤ 6 кадров."
+  ],
+  "tags": ["cuts", "dialogue", "teaser"],
+  "applied_in": [
+    {
+      "job": "young_sherlock_s01e01",
+      "title": "Young Sherlock S01E01 — затравка 9:16",
+      "when": "2026-08-14",
+      "note": "Сборка без xfade; fade 4 кадра только на гэпах fight→сарай и сарай→итог."
+    }
+  ]
+}
