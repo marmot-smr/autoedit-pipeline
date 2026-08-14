@@ -11,7 +11,9 @@ param(
     [switch]$Library,
     [switch]$LibraryIngest,
     [string]$Url = "",
-    [string]$ItemId = ""
+    [string]$ItemId = "",
+    [switch]$Telegram,
+    [switch]$TelegramAutostart
 )
 
 $ErrorActionPreference = "Stop"
@@ -49,6 +51,21 @@ if ($LibraryIngest) {
 
 if ($Library) {
     & $Python (Join-Path $Root "scripts\library.py") "serve"
+    exit $LASTEXITCODE
+}
+
+if ($TelegramAutostart) {
+    $task = "AutoEditTelegramBot"
+    $py = $Python
+    $script = Join-Path $Root "scripts\telegram_bot.py"
+    $action = "powershell.exe -NoProfile -WindowStyle Hidden -Command `"Set-Location -LiteralPath '$Root'; & '$py' '$script'`""
+    schtasks /Create /TN $task /TR $action /SC ONLOGON /RL LIMITED /F
+    Write-Host "Задача $task: старт при входе в Windows. Запусти бота сейчас: .\\run.ps1 -Telegram"
+    exit $LASTEXITCODE
+}
+
+if ($Telegram) {
+    & $Python (Join-Path $Root "scripts\telegram_bot.py")
     exit $LASTEXITCODE
 }
 

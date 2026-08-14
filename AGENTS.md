@@ -22,6 +22,13 @@
 - Оболочка: `.\run.ps1 -Library` (http://127.0.0.1:8765).
 - После применения приёма в джобе — `applied_in` на карточке.
 
+## Telegram
+
+Локальный мост: телефон → этот ПК → Cursor agent в cwd.
+
+`.env`: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_ALLOWED_USER_IDS`, `CURSOR_API_KEY`.  
+`.\run.ps1 -Telegram` (процесс должен жить). Автостарт: `.\run.ps1 -TelegramAutostart`.
+
 ## Не делать
 
 См. `.cursor/rules/pipeline-core.mdc` и `teaser-assembly.mdc`.
